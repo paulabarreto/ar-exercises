@@ -10,3 +10,8 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+@store_name = gets.chomp
+
+newStore = Store.create(name: @store_name)
+puts newStore.errors[:annual_revenue] # => ["is too short (minimum is 3 characters)"]
